@@ -7,28 +7,26 @@
   <body>
     <header>
       <div>
-        <a href=""><img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Логотип магазина Техномарт"></a> <!--Вообще это не очень-то и похоже на логотип, выглядит как текст обычный. Но наверно все-таки как изображение оформляем, да?-->
-        <button><span>Иконка Поиск</span>Поиск</button>
-        <a href=""><span>Иконка Закладки</span>Закладки: 0</a>
-        <a href=""><span>Иконка Корзина</span>Корзина: 0</a>
+        <a><img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Логотип магазина Техномарт"></a>
+        <span><button>Иконка Поиск</button>Поиск</span>
+        <a href="">Закладки: <span>0</span></a>
+        <a href="">Корзина: <span>0</span></a>
         <a href="">Оформить заказ</a>
       </div>
       <div>
         <p>
-          Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для ремонта
+          Интернет&hyphen;магазин строительных материалов и инструментов для ремонта
         </p>
         <div>
-          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a href="tel:+78125550555">+7 (812) 555&hyphen;05&hyphen;55</a>
+          <p>г. Санкт&hyphen;Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <a href=""><span>Иконка Войти</span>Войти</a>
         <a href="">Регистрация</a>
       </div>      
       <nav>
         <ul>
-          <li><a href="#">Главная</a></li>
+          <li><a>Главная</a></li>
           <li><a href="">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="">Новости</a></li>
@@ -39,37 +37,48 @@
       </nav>
     </header>    
     <main>
-      <!--Весь этот кусок ниже, оказывается, не надо было размечать пока, но я это слишком поздно заметил... Удалять не стал, но сделан он все равно криво, скорее всего, так что и проверять пока не стоит, пожалуй :)-->
-
-      <!--<h1>Магазин Техномарт</h1>    
-      <section>
-        <h2>Категории</h2>
-        <ul>
-          <li>
-            <h3>Материалы</h3>
-            <p>На любой вкус</p>
-          </li>
-          <li>
-            <h3>Инструмент</h3>
-            <p>На все случаи</p>
-          </li>
-          <li>
-            <h3>Техника</h3>
-            <p>Для стройки</p>
-          </li>
-          <li>
-            <h3>Скидки 50%</h3>
-            <p>На 350 ТОВАРОВ</p>
-          </li>
-          <li>
-            <h3>Доставка</h3>
-            <p>Бесплатно</p>
-          </li>
-        </ul>
+      <h1>Магазин Техномарт</h1>    
+      <section> <!-- Попробовал здесь поменять все, убрал список, но не уверен, что это article-ы все же. Вроде со смыслом и заголовками, поэтому не стал делать просто div-ами. Может section, но их что-то и так многовато. В общем я в замешательстве :)-->
+        <h2>Категории</h2>               
+        <article>
+          <h3>Материалы</h3>
+          <p><a href="">На любой вкус</a></p>
+        </article>
+        <article>
+          <h3>Инструмент</h3>
+          <p><a href="">На все случаи</a></p>
+        </article>
+        <article>
+          <h3>Техника</h3>
+          <p><a href="">Для стройки</a></p>
+        </article>
+        <article>
+          <h3>Скидки 50%</h3>
+          <p><a href="">На 350 ТОВАРОВ</a></p>
+        </article>
+        <article>
+          <h3>Доставка</h3>
+          <p><a href="">Бесплатно</a></p>
+        </article>
         <div>
-          <h3>Перфораторы</h3>
-          <p>Настоящие мужские игрушки</p>
-          <a href="catalog.html">Открыть каталог</a>
+          <article>
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+            <a href="catalog.html">Открыть каталог</a>
+          </article>
+          <article>
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+            <a href="catalog.html">Открыть каталог</a>
+          </article>
+          <div>
+            <button>Назад</button>
+            <button>Вперед</button>
+          </div>
+          <div>
+            <span>Пагинация 1</span>
+            <span>Пагинация 2</span>
+          </div>
         </div>
       </section>
       <section>
@@ -81,58 +90,74 @@
           <li>
             <article>
               <img src="https://via.placeholder.com/184x164" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+              <div>
+                <a href="">Купить</a>
+                <a href="">В закладки</a>
+              </div>
               <h3>Перфоратор BOSCH BFG 9000</h3>
-              <p>32500 р.</p>
+              <s>32500 р.</s>
               <p>25500 р.</p>
             </article>
           </li>
           <li>
             <article>
               <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+              <div>
+                <a href="">Купить</a>
+                <a href="">В закладки</a>
+              </div>
               <h3>Перфоратор BOSCH BFG 3000</h3>
-              <p>22500 р.</p>
+              <s>22500 р.</s>
               <p>15500 р.</p>
             </article>
           </li>
           <li>
             <article>
               <img src="https://via.placeholder.com/144x128" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+              <div>
+                <a href="">Купить</a>
+                <a href="">В закладки</a>
+              </div>
               <h3>Перфоратор BOSCH BFG 6000</h3>
-              <p>30500 р.</p>
+              <s>30500 р.</s>
               <p>25500 р.</p>
             </article>
           </li>
           <li>
             <article>
               <img src="https://via.placeholder.com/127x112" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+              <div>
+                <a href="">Купить</a>
+                <a href="">В закладки</a>
+              </div>
               <h3>Перфоратор BOSCH BFG 2000</h3>
-              <p></p>
+              <s>22500 р.</s>
               <p>12500 р.</p>
             </article>
           </li>            
         </ul>
       </section>
+      <!--
       <section>
-        <div>
+        <div>          
           <h2>Популярные производители:</h2>
           <a href="catalog.html">Открыть каталог</a>
         </div>
         <ul>
-          <li><img src="https://via.placeholder.com/220x145" width="220" height="145" alt="BOSCH"></li>
-          <li><img src="https://via.placeholder.com/123x40" width="123" height="40" alt="Makita"></li>
-          <li><img src="https://via.placeholder.com/146x44" width="146" height="44" alt="DeWALT"></li>
-          <li><img src="https://via.placeholder.com/200x88" width="200" height="88" alt="Интерскол"></li>
-          <li><img src="https://via.placeholder.com/169x31" width="169" height="31" alt="HITACHI"></li>
-          <li><img src="https://via.placeholder.com/121x73" width="121" height="73" alt="LG"></li>
-          <li><img src="https://via.placeholder.com/151x96" width="151" height="96" alt="AEG"></li>
-          <li><img src="https://via.placeholder.com/204x69" width="204" height="69" alt="metabo"></li>
+          <li><a href=""><img src="https://via.placeholder.com/220x145" width="220" height="145" alt="BOSCH"></a></li>
+          <li><a href=""><img src="https://via.placeholder.com/123x40" width="123" height="40" alt="Makita"></a></li>
+          <li><a href=""><img src="https://via.placeholder.com/146x44" width="146" height="44" alt="DeWALT"></a></li>
+          <li><a href=""><img src="https://via.placeholder.com/200x88" width="200" height="88" alt="Интерскол"></a></li>
+          <li><a href=""><img src="https://via.placeholder.com/169x31" width="169" height="31" alt="HITACHI"></a></li>
+          <li><a href=""><img src="https://via.placeholder.com/121x73" width="121" height="73" alt="LG"></a></li>
+          <li><a href=""><img src="https://via.placeholder.com/151x96" width="151" height="96" alt="AEG"></a></li>
+          <li><a href=""><img src="https://via.placeholder.com/204x69" width="204" height="69" alt="metabo"></a></li>
         </ul>
       </section>
       <section>
         <h2>Сервисы</h2>
         <p>
-          Хороший интернет-магазин отличается от плохого не только ценами!<br>
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+          Хороший интернет&hyphen;магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <ul>
           <li>Доставка</li>
@@ -142,23 +167,17 @@
         <div>            
           <h3>Доставка</h3>
           <p>
-            Мы с удовольствием доставим ваш товар прямо<br>
-            к вашему подъезду совершенно бесплатно!<br>
-            Ведь мы неплохо заработаем,<br>
-            поднимая его на ваш этаж!
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
           </p>
         </div>          
       </section>-->
       <section>
         <h2>Компания «Техномарт»</h2>
         <p>
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
-          ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
-          гастарбайтерах.
+          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
         </p>
         <p>
-          Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-          Техномарт работает со многими транспортными компаниями:
+          Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
         </p>
         <ul>
           <li>Деловые линии</li>
@@ -170,8 +189,7 @@
       <section>
         <h2>Контакты</h2>
         <p>
-          Вы можете забрать товар сами,<br>
-          заехав в наш офис:
+          Вы можете забрать товар сами, заехав в наш офис:
         </p>
         <a href=""><img src="https://via.placeholder.com/300x158" width="300" height="158" alt="Карта"></a>
         <a href="">Заблудились? Напишите нам!</a>
@@ -188,8 +206,7 @@
           <li><a href="">Контакты</a></li>
         </ul>
         <p>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55
+          г. Санкт&hyphen;Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555&hyphen;05&hyphen;55
         </p>
         <ul>
           <li><a href="">Материалы</a></li>
@@ -200,8 +217,7 @@
       </div>
       <div>
         <p>
-          &copy; 2010–2019 Компания «Техномарт»<br>
-          Все права защищены
+          &copy; 2010&ndash;2019 Компания «Техномарт» Все права защищены
         </p>
         <ul>
           <li><a href="">Вконтакте</a></li>
@@ -209,12 +225,12 @@
           <li><a href="">Instagram</a></li>
         </ul>
         <p>
-          Обратная связь:<br>
+          Обратная связь:
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
         <p>
-          Разработано —<br>
-          <a href="https://htmlacademy.ru/">htmlacademy.ru</a>
+          Разработано&nbsp;&mdash;
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
     </footer>
