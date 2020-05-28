@@ -8,7 +8,10 @@
     <header>
       <div>
         <a><img src="./img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
-        <span><button>Иконка Поиск</button>Поиск:</span>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search-field">Поиск:</label>
+          <input type="search" name="search" id="search-field" placeholder="Поиск:">
+        </form>        
         <a href="">Закладки: <span>0</span></a>
         <a href="">Корзина: <span>0</span></a>
         <a href="">Оформить заказ</a>
@@ -19,7 +22,7 @@
           <a href="tel:+78125550555">+7 (812) 555&hyphen;05&hyphen;55</a>
           <p>г. Санкт&hyphen;Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
-        <a href=""><span>Иконка Войти</span>Войти</a>
+        <a href="">Войти</a>
         <a href="">Регистрация</a>
       </div>
       <nav>
@@ -35,9 +38,9 @@
       </nav>
     </header>
     <main>
-      <h1 hidden>Магазин Техномарт</h1>
+      <h1 class="visually-hidden">Магазин Техномарт</h1>
       <section>
-        <h2 hidden>Категории</h2> 
+        <h2 class="visually-hidden">Категории</h2> 
         <div>
           <h3>Материалы</h3>
           <a href="">На любой вкус</a>
@@ -91,8 +94,8 @@
                 <a href="">Купить</a>
                 <a href="">В закладки</a>
               </div>
-              <img src="./img/products/BOSCH-BFG-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-              <h3>Перфоратор BOSCH BFG 9000</h3>
+              <a href=""><img src="./img/products/BOSCH-BFG-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000"></a>
+              <h3><a href="">Перфоратор BOSCH BFG 9000</a></h3>
               <del>32500 р.</del>
               <p>25500 р.</p>
             </article>
@@ -103,8 +106,8 @@
                 <a href="">Купить</a>
                 <a href="">В закладки</a>
               </div>
-              <img src="./img/products/BOSCH-BFG-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
+              <a href=""><img src="./img/products/BOSCH-BFG-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></a>
+              <h3><a href="">Перфоратор BOSCH BFG 3000</a></h3>
               <del>22500 р.</del>
               <p>15500 р.</p>
             </article>
@@ -115,8 +118,8 @@
                 <a href="">Купить</a>
                 <a href="">В закладки</a>
               </div>
-              <img src="./img/products/BOSCH-BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-              <h3>Перфоратор BOSCH BFG 6000</h3>
+              <a href=""><img src="./img/products/BOSCH-BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></a>
+              <h3><a href="">Перфоратор BOSCH BFG 6000</a></h3>
               <del>30500 р.</del>
               <p>25500 р.</p>
             </article>
@@ -127,8 +130,8 @@
                 <a href="">Купить</a>
                 <a href="">В закладки</a>
               </div>
-              <img src="./img/products/BOSCH-BFG-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-              <h3>Перфоратор BOSCH BFG 2000</h3>
+              <a href=""><img src="./img/products/BOSCH-BFG-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></a>
+              <h3><a href="">Перфоратор BOSCH BFG 2000</a></h3>
               <del>22500 р.</del>
               <p>12500 р.</p>
             </article>
@@ -197,8 +200,8 @@
     </main>
     <footer>
       <div>
-        <a href=""><img src="./img/icons/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
-        <ul>nhh
+        <a><img src="./img/icons/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
+        <ul>
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
           <li><a href="./catalog.html">Каталог</a></li>
@@ -234,5 +237,29 @@
         </p>
       </div>
     </footer>
+    <section> 
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <label for="feedback-name">Ваше имя:</label>
+          <input type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        </div>
+        <div>
+          <label for="feedback-email">Ваш e-mail:</label>
+          <input type="email" name="email" id="feedback-email" placeholder="email@example.com">
+        </div>
+        <div>
+          <label for="feedback-text">Текст письма:</label>
+          <textarea name="text" id="feedback-text" rows="4">В свободной форме</textarea>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
+    <section>
+      <h2 class="visually-hidden">Карта</h2>
+      <a href="https://goo.gl/maps/TgD5axc2hdM5SUbC6"><img src="./img/map-pop-up/map-large.png" width="970" height="477" alt="Увеличенная карта офиса по адресу улица Большая Конюшенная, дом 19"></a>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
