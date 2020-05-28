@@ -51,15 +51,17 @@
         </ul>
         <h1>Перфораторы</h1>
         <section>
-          <h2>Фильтр:</h2>
-          <h3>Цена:</h3>
-          <div>
-            <span><!--Бегунок--></span>
-            <span>0</span>
-            <span>&ndash;</span>
-            <span>30000</span>
-          </div>
-          <form action="https://echo.htmlacademy.ru" method="get">
+          <h2>Фильтр:</h2>          
+          <form action="https://echo.htmlacademy.ru" method="get" oninput="price_max.value=range_price_max.value">
+            <fieldset>
+              <legend>Цена:</legend>
+              <div>
+                <input type="range" name="price" id="range_price_max" min="0" max="35500" step="500" value="30000">
+                <output name="price_min">0</output>              
+                <span>&ndash;</span>
+                <output name="price_max">30000</output>
+              </div>
+            </fieldset>
             <fieldset>
               <legend>Производители:</legend>
               <ul>
