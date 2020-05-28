@@ -7,19 +7,19 @@
   <body>
     <header>
       <div>
-        <a href="./index.html"><img src="./img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
+        <a href="./index.html" aria-label="На главную страницу"><img src="./img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
         <form action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search-field">Поиск:</label>
           <input type="search" name="search" id="search-field" placeholder="Поиск:">
         </form>
-        <a href="">Закладки: <span>0</span></a>
-        <a href="">Корзина: <span>10</span></a>
+        <a href="" aria-label="Закладки">Закладки: <span>0</span></a>
+        <a href="" aria-label="Корзина">Корзина: <span>10</span></a>
         <a href="">Оформить заказ</a>
       </div>
       <div> 
         <p>Интернет&hyphen;магазин строительных материалов и инструментов для ремонта</p>
         <div>
-          <a href="tel:+78125550555">+7 (812) 555&hyphen;05&hyphen;55</a>
+          <a href="tel:+78125550555" aria-label="Позвонить">+7 (812) 555&hyphen;05&hyphen;55</a>
           <p>г. Санкт&hyphen;Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div>
@@ -56,10 +56,11 @@
             <fieldset>
               <legend>Цена:</legend>
               <div>
+                <label for="range_price_max" class="visually-hidden">Диапазон цен</label>
                 <input type="range" name="price" id="range_price_max" min="0" max="35500" step="500" value="30000">
-                <output name="price_min">0</output>              
+                <output name="price_min" aria-label="Минимальная цена">0</output>              
                 <span>&ndash;</span>
-                <output name="price_max">30000</output>
+                <output name="price_max" aria-label="Максимальная цена">30000</output>
               </div>
             </fieldset>
             <fieldset>
@@ -206,9 +207,9 @@
             <p>12500 р.</p>
           </article>
           <ul>
-            <li><button>1</button></li>
-            <li><button>2</button></li>
-            <li><button>3</button></li>
+            <li><button aria-label="Первая страница">1</button></li>
+            <li><button aria-label="Вторая страница">2</button></li>
+            <li><button aria-label="Третья страница">3</button></li>
             <li><button>Следующая</button></li>
           </ul>
         </section>
@@ -221,7 +222,7 @@
     </main>
     <footer>
       <div>
-        <a href=""><img src="./img/icons/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
+        <a href="./index.html" aria-label="На главную страницу"><img src="./img/icons/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
         <ul>
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
@@ -250,11 +251,11 @@
         </ul>
         <p>
           Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a>
         </p>
         <p>
           Разработано&nbsp;&mdash;
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Academy">htmlacademy.ru</a>
         </p>
     </div>
     </footer>
