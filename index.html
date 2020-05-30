@@ -9,10 +9,11 @@
       <div>
         <a><img src="./img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
         <form action="https://echo.htmlacademy.ru" method="get">
+          <button type="submit" aria-label="Начать поиск"></button>
           <label class="visually-hidden" for="search-field">Поиск:</label>
           <input type="search" name="search" id="search-field" placeholder="Поиск:">
         </form>        
-        <a href="" aria-label="Закладки">Закладки: <span>0</span></a> <!--Здесь и далее немного заморочился с доступностью - добавил aria-label, просто чтобы скринридер не читал "Ссылка Закладки двоеточие ноль". Так правильно делать, или это уже перебор?-->
+        <a href="" aria-label="Закладки">Закладки: <span>0</span></a>
         <a href="" aria-label="Корзина">Корзина: <span>0</span></a>
         <a href="">Оформить заказ</a>
       </div>
@@ -77,8 +78,8 @@
             <button aria-label="Вперед"></button>
           </div>
           <div>
-            <button aria-label="Первая страница слайдера"></button>
-            <button aria-label="Вторая страница слайдера"></button>
+            <button aria-label="Первый слайд"></button>
+            <button aria-label="Второй слайд"></button>
           </div>
         </div>
       </section>
@@ -237,8 +238,7 @@
         </p>
       </div>
     </footer>
-    <section> 
-      <h2 class="visually-hidden">Обратная связь</h2>
+    <div>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div>
           <label for="feedback-name">Ваше имя:</label>
@@ -255,11 +255,10 @@
         <button type="submit">Отправить</button>
       </form>
       <button type="button">Закрыть</button>
-    </section>
-    <section>
-      <h2 class="visually-hidden">Карта</h2>
+    </div>
+    <div>
       <a href="https://goo.gl/maps/TgD5axc2hdM5SUbC6" aria-label="Открыть карту в Google Maps"><img src="./img/map-pop-up/map-large.png" width="970" height="477" alt="Увеличенная карта офиса по адресу улица Большая Конюшенная, дом 19"></a>
       <button type="button">Закрыть</button>
-    </section>
+    </div>
   </body>
 </html>
