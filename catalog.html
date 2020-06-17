@@ -14,11 +14,11 @@
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search-field">Поиск:</label>
           <input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск:">
-          <button class="search-button" type="submit" aria-label="Начать поиск"></button>
+          <button class="search-button" type="submit" aria-label="Начать поиск"><!--<svg>Потом воткну иконку сюда - должна менять цвет</svg>--></button>
         </form>
-        <a class="link bookmarks-link" href="" aria-label="Закладки">Закладки: <span>0</span></a>
-        <a class="link cart-link" href="" aria-label="Корзина">Корзина: <span>10</span></a>
-        <a class="link order-button" href="">Оформить заказ</a>
+        <a class="bookmarks-link" href="" aria-label="Закладки">Закладки: <span>0</span></a>
+        <a class="cart-link" href="" aria-label="Корзина">Корзина: <span>10</span></a>
+        <a class="order-button" href="">Оформить заказ</a>
       </div>
       <div class="main-header-middle">
         <i class="main-header-description">Интернет&hyphen;магазин строительных материалов и инструментов для ремонта</i>
@@ -27,7 +27,7 @@
           <p class="main-header-address">г. Санкт&hyphen;Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-navigation">
-          <a class="user-navigation-button profile-button" href="">Равшан Джамшутович</a><a class="user-navigation-button logout-button" href="" aria-label="Выйти"></a>
+          <a class="user-navigation-button profile-button" href=""><!--<svg class="user-navigation-icon">Потом воткну иконку сюда - должна менять цвет</svg>-->Равшан Джамшутович</a><a class="user-navigation-button logout-button" href="" aria-label="Выйти"><!--<svg class="user-navigation-icon">Потом воткну иконку сюда - должна менять цвет</svg>--></a>
           <ul class="profile-navigation">
               <li><a class="profile-navigation-button" href="">Мои заказы</a></li>
               <li><a class="profile-navigation-button" href="">Личный кабинет</a></li>
@@ -87,7 +87,7 @@
                 <label class="filter-label" for="brands-dewalt">Dewalt</label>
               </li>
               <li>
-                <input class="filter-brands-checkbox" type="checkbox" name="Hitachi" id="brands-hitachi">
+                <input class="filter-brands-checkbox" type="checkbox" name="Hitachi" id="brands-hitachi" disabled>
                 <label class="filter-label" for="brands-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -113,11 +113,11 @@
         <section class="sort">
           <h3 class="sort-and-filter-title" >Сортировка:</h3>
           <ul class="sort-list">
-            <li><button class="sort-button" >По цене</button></li>
+            <li><button class="sort-button active" >По цене</button></li>
             <li><button class="sort-button" >По типу</button></li>
             <li><button class="sort-button" >По функционалу</button></li>
-            <li><button class="sort-button sort-order ascending" aria-label="По возрастанию"></button></li>
-            <li><button class="sort-button sort-order descending" aria-label="По убыванию"></button></li>
+            <li><button class="sort-button sort-order ascending active" aria-label="По возрастанию"><!--<svg class="user-navigation-icon">Потом воткну иконку сюда - должна менять цвет</svg>--></button></li>
+            <li><button class="sort-button sort-order descending" aria-label="По убыванию"><!--<svg class="user-navigation-icon">Потом воткну иконку сюда - должна менять цвет</svg>--></button></li>
           </ul>
         </section>
         <article class="catalog-item">
@@ -211,7 +211,7 @@
           <p class="catalog-item-price">12500 р.</p>
         </article>
         <ul class="catalog-pagination">
-          <li><button class="catalog-pagination-button" aria-label="Первая страница">1</button></li>
+          <li><button class="catalog-pagination-button active" aria-label="Первая страница">1</button></li>
           <li><button class="catalog-pagination-button" aria-label="Вторая страница">2</button></li>
           <li><button class="catalog-pagination-button" aria-label="Третья страница">3</button></li>
           <li><button class="catalog-pagination-button">Следующая</button></li>
@@ -255,11 +255,11 @@
         </ul>
         <p class="footer-feedback">
           Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a>
+          <a class="footer-feedback-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a>
         </p>
         <p class="footer-developer">
           Разработано&nbsp;&mdash;
-          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Academy">htmlacademy.ru</a>
+          <a class="footer-developer-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Academy">htmlacademy.ru</a>
         </p>
       </div>
     </footer>
