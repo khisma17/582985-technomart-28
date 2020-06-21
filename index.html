@@ -33,17 +33,17 @@
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a class="site-navigation-link">Главная</a></li>
-          <li><a class="site-navigation-link" href="">Компания</a></li>
-          <li><a class="site-navigation-link" href="./catalog.html">Каталог</a></li>
-          <li><a class="site-navigation-link" href="">Новости</a></li>
-          <li><a class="site-navigation-link" href="">Спецпредложения</a></li>
-          <li><a class="site-navigation-link" href="">Доставка</a></li>
-          <li><a class="site-navigation-link" href="">Контакты</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link">Главная</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="">Компания</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="./catalog.html">Каталог</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="">Новости</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="">Спецпредложения</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="">Доставка</a></li>
+          <li class="site-navigation-item"><a class="site-navigation-link" href="">Контакты</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main-content">
       <h1 class="visually-hidden">Магазин Техномарт</h1>
       <section class="categories">
         <h2 class="visually-hidden">Категории</h2>
@@ -73,7 +73,7 @@
             <p>Настоящие мужские игрушки</p>
             <a  class="button slider-item-button" href="./catalog.html">Открыть каталог</a>
           </div>
-          <div class="slider-item drills">
+          <div class="slider-item drills visually-hidden">
             <h3 class="slider-title">Дрели</h3>
             <p>Соседям на радость!</p>
             <a  class="button slider-item-button" href="./catalog.html">Открыть каталог</a>
@@ -83,18 +83,18 @@
             <button class="slider-forward-button" aria-label="Вперед"></button>
           </div>
           <div class="slider-pagination">
-            <button aria-label="Первый слайд"></button>
-            <button aria-label="Второй слайд"></button>
+            <button class="slider-pagination-button" aria-label="Первый слайд"></button>
+            <button class="slider-pagination-button" aria-label="Второй слайд"></button>
           </div>
         </div>
       </section>
       <section class="popular-products">
-        <div>
+        <div class="section-header-wrapper">
           <h2 class="section-header">Популярные товары:</h2>
           <a class="button" href="">Все популярные товары</a>
         </div>
         <ul class="popular-products-list">
-          <li>
+          <li class="popular-products-item">
             <article class="catalog-item">
               <div class="catalog-item-actions">
                 <a class="button buy-button" href="">Купить</a>
@@ -106,7 +106,7 @@
               <p class="catalog-item-price">25500 р.</p>
             </article>
           </li>
-          <li>
+          <li class="popular-products-item">
             <article class="catalog-item new">
               <div class="catalog-item-actions">
                 <a class="button buy-button" href="">Купить</a>
@@ -118,7 +118,7 @@
               <p class="catalog-item-price">15500 р.</p>
             </article>
           </li>
-          <li>
+          <li class="popular-products-item">
             <article class="catalog-item">
               <div class="catalog-item-actions">
                 <a class="button buy-button" href="">Купить</a>
@@ -130,7 +130,7 @@
               <p class="catalog-item-price">25500 р.</p>
             </article>
           </li>
-          <li>
+          <li class="popular-products-item">
             <article class="catalog-item new">
               <div class="catalog-item-actions">
                 <a class="button buy-button" href="">Купить</a>
@@ -145,7 +145,7 @@
         </ul>
       </section>
       <section class="popular-brands">
-        <div>
+        <div class="section-header-wrapper">
           <h2 class="section-header">Популярные производители:</h2>
           <a class="button" href="">Все производители</a>
         </div>
@@ -162,21 +162,21 @@
       </section>
       <section class="info-block services">
         <h2 class="section-header alternative">Сервисы</h2>
-        <p>
+        <p class="services-description">
           Хороший интернет&hyphen;магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="services-slider">
           <div class="services-slider-item services-delivery">
             <h3 class="section-header">Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+            <p class="service-type-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
           </div>
-          <div class="services-slider-item services-warranty">
+          <div class="services-slider-item services-warranty visually-hidden">
             <h3 class="section-header">Гарантия</h3>
-            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+            <p class="service-type-description">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
           </div>
-          <div class="services-slider-item services-loans">
+          <div class="services-slider-item services-loans visually-hidden">
             <h3 class="section-header">Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+            <p class="service-type-description">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
             <a class="button" href="">Отправить заявку</a>
           </div>
           <ul class="services-slider-list">
@@ -210,20 +210,20 @@
       <div class="footer-middle">
         <a class="main-footer-logo logo"><img src="./img/icons/logo-technomart-larger.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
         <ul class="footer-site-navigation">
-          <li><a class="footer-site-navigation-link" href="">Компания</a></li>
-          <li><a class="footer-site-navigation-link" href="">Новости</a></li>
-          <li><a class="footer-site-navigation-link" href="./catalog.html">Каталог</a></li>
-          <li><a class="footer-site-navigation-link" href="">Доставка</a></li>
-          <li><a class="footer-site-navigation-link" href="">Контакты</a></li>
+          <li class="footer-site-navigation-item"><a class="footer-site-navigation-link" href="">Компания</a></li>
+          <li class="footer-site-navigation-item"><a class="footer-site-navigation-link" href="">Новости</a></li>
+          <li class="footer-site-navigation-item"><a class="footer-site-navigation-link" href="./catalog.html">Каталог</a></li>
+          <li class="footer-site-navigation-item"><a class="footer-site-navigation-link" href="">Доставка</a></li>
+          <li class="footer-site-navigation-item"><a class="footer-site-navigation-link" href="">Контакты</a></li>
         </ul>
         <p class="footer-contacts">
           г. Санкт&hyphen;Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555&hyphen;05&hyphen;55
         </p>
         <ul class="footer-additional-navigation">
-          <li><a class="footer-additional-navigation-link" href="">Материалы</a></li>
-          <li><a class="footer-additional-navigation-link" href="">Техника</a></li>
-          <li><a class="footer-additional-navigation-link" href="">Инструмент</a></li>
-          <li><a class="footer-additional-navigation-link" href="">Спецпредложения</a></li>
+          <li class="footer-additional-navigation-item"><a class="footer-additional-navigation-link" href="">Материалы</a></li>
+          <li class="footer-additional-navigation-item"><a class="footer-additional-navigation-link" href="">Техника</a></li>
+          <li class="footer-additional-navigation-item"><a class="footer-additional-navigation-link" href="">Инструмент</a></li>
+          <li class="footer-additional-navigation-item"><a class="footer-additional-navigation-link" href="">Спецпредложения</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
@@ -231,9 +231,9 @@
           &copy; 2010&ndash;2019 Компания «Техномарт» Все права защищены
         </p>
         <ul class="footer-social">
-          <li><a class="social-button vk" href="" aria-label="Вконтакте"></a></li>
-          <li><a class="social-button facebook" href="" aria-label="Facebook"></a></li>
-          <li><a class="social-button instagram" href="" aria-label="Instagram"></a></li>
+          <li class="footer-social-item"><a class="social-button vk" href="" aria-label="Вконтакте"></a></li>
+          <li class="footer-social-item"><a class="social-button facebook" href="" aria-label="Facebook"></a></li>
+          <li class="footer-social-item"><a class="social-button instagram" href="" aria-label="Instagram"></a></li>
         </ul>
         <p class="footer-feedback">
           Обратная связь:
