@@ -41,16 +41,8 @@
   --special-transparent-white: rgba(255, 255, 255, 0.3);
 }
 
-body {
-  min-width: 960px;
-  margin: 0;
-  padding: 0;
-  font-family: var(--basic-font-family);
-  font-size: 13px;
-  line-height: 24px;
-  font-weight: 400;
-  color: var(--basic-black);
-  background-color: var(--basic-white);
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -66,23 +58,43 @@ img {
   height: 100%;
 }
 
+.center {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .page-body {
+  min-width: 960px; /* Раз поменяли box-sizing, то и здесь ширина с учетом паддингов должна быть указана, правда ведь? */
+  margin: 0;
+  padding: 0;
+  font-family: var(--basic-font-family);
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
 }
 
 .main-header {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   display: grid;
+  grid-template: "header-top" 42px
+                 "header-middle" 1fr
+                 "header-bottom" 60px / 100%;
   padding-bottom: 60px;
   font-family: var(--special-font-family);
   background-color: var(--special-almost-white);
 }
 
 .main-header-top {
+  background-color: var(--basic-dark-blue);
+  grid-area: header-top;
+}
+
+.main-header-top-menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -90,7 +102,6 @@ img {
   align-items: center;
   font-size: 18px;
   padding: 9px 0;
-  background-color: var(--basic-dark-blue);
   color: var(--basic-white);
 }
 
@@ -100,12 +111,17 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 46px 0 40px 30px;
+  grid-area: header-middle;
+}
+
+.main-header-bottom {
+  font-size: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+  grid-area: header-bottom;
 }
 
 .main-content {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   display: grid;
   padding-top: 59px;
   padding-bottom: 70px;
@@ -244,7 +260,7 @@ img {
   line-height: 23px;
   color: var(--basic-red);
   width: 197px;
-  margin-right: 93px;
+  margin-right: auto;
 }
 
 .main-header-contacts {
@@ -381,12 +397,6 @@ img {
   color: var(--special-active-gray);
 }
 
-.main-navigation {
-  font-size: 18px;
-  color: var(--basic-white);
-  background-color: var(--basic-blue);
-}
-
 .site-navigation {
   list-style: none;
   display: flex;
@@ -400,7 +410,7 @@ img {
 
 .site-navigation-item {
   flex-grow: 1;
-  margin-right: 55px;
+  margin-right: auto;
 }
 
 .site-navigation-link {
@@ -424,16 +434,16 @@ img {
 .categories {
   font-family: var(--special-font-family);
   color: var(--basic-white);
-  display:  grid;
-  grid-template-columns: 300px 300px 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 123px 123px 123px;
   gap: 20px;
+  padding-bottom: 59px;
 }
 
 .slider {
   grid-column: 1 / 3;
-  grid-row: 2 / -1; /* вот здесь я в замешательстве - почему-то он не хочет у меня на два ряда растягиваться. Подозреваю, что из-за кнопок управления и пагинации, но ума не приложу, как их по-человечески расположить */
-  padding-bottom: 59px;
+  grid-row: 2 / -1;
 }
 
 .slider-pagination {
@@ -530,6 +540,7 @@ img {
 
 .slider-item {
   background-repeat: no-repeat;
+  min-height: 266px;
 }
 
 .perforators {
@@ -576,14 +587,12 @@ img {
 }
 
 .popular-products-item {
-  width: 220px;
-  margin-right: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
 }
 
-.popular-products-item:last-child {
+.popular-products-item:last-child .catalog-item {
   margin-right: 0;
 }
 
@@ -644,6 +653,7 @@ img {
   min-height: 318px;
   margin-right: 20px;
   margin-bottom: 18px;
+  border: 1px solid var(--special-lighter-gray);
 }
 
 .catalog-item:nth-child(3n) {
@@ -687,9 +697,8 @@ img {
 }
 
 .brands-item {
-  box-sizing: border-box;
   border: 1px solid var(--special-lighter-gray);
-  width: 220px;
+  width: calc((100% - 60px) / 4);
   margin-right: 20px;
   margin-bottom: 20px;
 }
@@ -710,6 +719,7 @@ img {
 .services-description {
   width: 394px;
   margin-top: 25px;
+  margin-bottom: 70px;
 }
 
 .perforators-intro {
@@ -718,9 +728,9 @@ img {
 }
 
 .services-slider {
-  display: grid;
-  grid-template-columns: 240px;
-  column-gap: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .services-slider-list {
@@ -728,11 +738,10 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  grid-column: 1 / 2;
-  grid-row: 1 / -1;
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-right: 80px;
 }
 
 .services-slider-button {
@@ -740,9 +749,9 @@ img {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+  width: 240px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
-  width: 240px;
 }
 
 .services-slider-button:hover {
@@ -759,13 +768,14 @@ img {
 }
 
 .services-slider-item {
-  grid-column: 2 / -1;
   background-repeat: no-repeat;
   background-position: center right;
+  flex-grow: 1;
+  min-height: 283px;
 }
 
 .service-type-description {
-  width: 313px;
+  width: 50%;
   margin: 0;
   margin-top: 30px;
   padding: 0;
@@ -784,13 +794,19 @@ img {
 }
 
 .index-columns {
-  display: grid;
-  grid-template-columns: 480px;
-  column-gap: 160px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 70px;
+}
+
+.about-us {
+  width: 50%;
+  margin-right: auto;
 }
 
 .contacts {
-  grid-column: 2 / -1;
+  width: calc(100% / 3);
 }
 
 .partners-list {
@@ -905,7 +921,6 @@ img {
 }
 
 .filter-field.text {
-  box-sizing: border-box;
   font-size: 17px;
   line-height: 18px;
   width: 95px;
@@ -921,8 +936,6 @@ img {
 .filter-brands {
   list-style: none;
 }
-
-/* Поменял пока эти селекторы ниже в соответствии с твоим комментарием, но впоследствии их все равно убрать надо будет наверно, да? Эти svg же тоже цвет меняют при наведении, а значит им место в разметке по-видимому */
 
 .filter-brands-checkbox::before {
   content: url("../img/icons/checkbox-off.svg");
@@ -1089,7 +1102,7 @@ img {
 }
 
 .catalog-pagination-button {
-  width: inherit;
+  width: 100%;
   line-height: 18px;
   border: 1px solid var(--special-gray);
   border-radius: 2px;
@@ -1117,9 +1130,6 @@ img {
 .main-footer {
   font-family: var(--special-font-family);
   background-color: var(--basic-blue);
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   display: grid;
 }
 
@@ -1134,9 +1144,12 @@ img {
 }
 
 .footer-bottom {
+  background-color: var(--basic-dark-blue);
+}
+
+.footer-bottom-content {
   font-size: 16px;
   line-height: 18px;
-  background-color: var(--basic-dark-blue);
   display: flex;
   justify-content: flex-start;
   align-items: center;

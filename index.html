@@ -10,17 +10,19 @@
   <body class="page-body">
     <header class="main-header">
       <div class="main-header-top">
-        <a class="main-header-logo logo"><img src="./img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label class="visually-hidden" for="search-field">Поиск:</label>
-          <input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск:">
-          <button class="search-button" type="submit" aria-label="Начать поиск"><!--<svg>Потом воткну иконку сюда - должна менять цвет</svg>--></button>
-        </form>
-        <a class="bookmarks-link" href="" aria-label="Закладки">Закладки: <span>0</span></a>
-        <a class="cart-link" href="" aria-label="Корзина">Корзина: <span>0</span></a>
-        <a class="order-button" href="">Оформить заказ</a>
+        <div class="main-header-top-menu center">
+          <a class="main-header-logo logo"><img src="./img/icons/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт"></a>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search-field">Поиск:</label>
+            <input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск:">
+            <button class="search-button" type="submit" aria-label="Начать поиск"><!--<svg>Потом воткну иконку сюда - должна менять цвет</svg>--></button>
+          </form>
+          <a class="bookmarks-link" href="" aria-label="Закладки">Закладки: <span>0</span></a>
+          <a class="cart-link" href="" aria-label="Корзина">Корзина: <span>0</span></a>
+          <a class="order-button" href="">Оформить заказ</a>
+        </div>
       </div>
-      <div class="main-header-middle">
+      <div class="main-header-middle center">
         <i class="main-header-description">Интернет&hyphen;магазин строительных материалов и инструментов для ремонта</i>
         <div class="main-header-contacts">
           <a class="main-header-phone" href="tel:+78125550555" aria-label="Позвонить">+7 (812) 555&hyphen;05&hyphen;55</a>
@@ -31,19 +33,21 @@
           <a class="user-navigation-button registration-button" href="">Регистрация</a>
         </div>
       </div>
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li class="site-navigation-item"><a class="site-navigation-link">Главная</a></li>
-          <li class="site-navigation-item"><a class="site-navigation-link" href="">Компания</a></li>
-          <li class="site-navigation-item"><a class="site-navigation-link" href="./catalog.html">Каталог</a></li>
-          <li class="site-navigation-item"><a class="site-navigation-link" href="">Новости</a></li>
-          <li class="site-navigation-item"><a class="site-navigation-link" href="">Спецпредложения</a></li>
-          <li class="site-navigation-item"><a class="site-navigation-link" href="">Доставка</a></li>
-          <li class="site-navigation-item"><a class="site-navigation-link" href="">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="main-header-bottom">
+        <nav class="main-navigation center">
+          <ul class="site-navigation">
+            <li class="site-navigation-item"><a class="site-navigation-link">Главная</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="">Компания</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="./catalog.html">Каталог</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="">Новости</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="">Спецпредложения</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="">Доставка</a></li>
+            <li class="site-navigation-item"><a class="site-navigation-link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main class="main-content">
+    <main class="main-content center">
       <h1 class="visually-hidden">Магазин Техномарт</h1>
       <section class="categories">
         <h2 class="visually-hidden">Категории</h2>
@@ -166,6 +170,11 @@
           Хороший интернет&hyphen;магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="services-slider">
+          <ul class="services-slider-list">
+            <li class="services-slider-list-item"><button class="services-slider-button active">Доставка</button></li>
+            <li class="services-slider-list-item"><button class="services-slider-button">Гарантия</button></li>
+            <li class="services-slider-list-item"><button class="services-slider-button">Кредит</button></li>
+          </ul>
           <div class="services-slider-item services-delivery">
             <h3 class="section-header">Доставка</h3>
             <p class="service-type-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
@@ -179,11 +188,6 @@
             <p class="service-type-description">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
             <a class="button" href="">Отправить заявку</a>
           </div>
-          <ul class="services-slider-list">
-            <li><button class="services-slider-button active">Доставка</button></li>
-            <li><button class="services-slider-button">Гарантия</button></li>
-            <li><button class="services-slider-button">Кредит</button></li>
-          </ul>
         </div>
       </section>
       <div class="index-columns">
@@ -207,7 +211,7 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="footer-middle">
+      <div class="footer-middle center">
         <a class="main-footer-logo logo"><img src="./img/icons/logo-technomart-larger.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
         <ul class="footer-site-navigation">
           <li class="footer-site-navigation-item"><a class="footer-site-navigation-link" href="">Компания</a></li>
@@ -227,22 +231,24 @@
         </ul>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; 2010&ndash;2019 Компания «Техномарт» Все права защищены
-        </p>
-        <ul class="footer-social">
-          <li class="footer-social-item"><a class="social-button vk" href="" aria-label="Вконтакте"></a></li>
-          <li class="footer-social-item"><a class="social-button facebook" href="" aria-label="Facebook"></a></li>
-          <li class="footer-social-item"><a class="social-button instagram" href="" aria-label="Instagram"></a></li>
-        </ul>
-        <p class="footer-feedback">
-          Обратная связь:
-          <a class="footer-feedback-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a>
-        </p>
-        <p class="footer-developer">
-          Разработано&nbsp;&mdash;
-          <a class="footer-developer-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Academy">htmlacademy.ru</a>
-        </p>
+        <div class="footer-bottom-content center">
+          <p class="footer-copyright">
+            &copy; 2010&ndash;2019 Компания «Техномарт» Все права защищены
+          </p>
+          <ul class="footer-social">
+            <li class="footer-social-item"><a class="social-button vk" href="" aria-label="Вконтакте"></a></li>
+            <li class="footer-social-item"><a class="social-button facebook" href="" aria-label="Facebook"></a></li>
+            <li class="footer-social-item"><a class="social-button instagram" href="" aria-label="Instagram"></a></li>
+          </ul>
+          <p class="footer-feedback">
+            Обратная связь:
+            <a class="footer-feedback-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо">mail@htmlacademy.ru</a>
+          </p>
+          <p class="footer-developer">
+            Разработано&nbsp;&mdash;
+            <a class="footer-developer-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти на сайт HTML Academy">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
     </footer>
     <div class="pop-up contact-us">
