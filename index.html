@@ -15,7 +15,11 @@
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search-field">Поиск:</label>
             <input class="search-field" type="search" name="search" id="search-field" placeholder="Поиск:">
-            <button class="search-button" type="submit" aria-label="Начать поиск"><!--<svg>Потом воткну иконку сюда - должна менять цвет</svg>--></button>
+            <button class="search-button" type="submit" aria-label="Начать поиск">
+              <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115 7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z"/>
+              </svg>
+            </button>
           </form>
           <a class="bookmarks-link" href="" aria-label="Закладки">Закладки: <span>0</span></a>
           <a class="cart-link" href="" aria-label="Корзина">Корзина: <span>0</span></a>
@@ -29,7 +33,12 @@
           <p class="main-header-address">г. Санкт&hyphen;Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-navigation">
-          <a class="user-navigation-button login-button" href=""><!--<svg class="user-navigation-icon">Потом воткну иконку сюда - должна менять цвет</svg>-->Войти</a>
+          <a class="user-navigation-button login-button" href="">
+            <svg class="user-navigation-icon login-icon" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.167 8.5L5.714 0v6H0v5h5.714v6l8.453-8.5z"/><path d="M16.177 15.01H11.39V17h4.787c2.074 0 2.861-1.81 2.885-3.026V3.028C19.038 1.811 18.252 0 16.177 0H11.39v1.99h4.787c.8 0 .945.681.962 1.057v10.904c-.016.376-.163 1.059-.962 1.059z"/>
+            </svg>
+            Войти
+          </a>
           <a class="user-navigation-button registration-button" href="">Регистрация</a>
         </div>
       </div>
@@ -51,7 +60,7 @@
       <h1 class="visually-hidden">Магазин Техномарт</h1>
       <section class="categories">
         <h2 class="visually-hidden">Категории</h2>
-        <div class="categories-item materials">
+        <div class="categories-item materials new">
           <h3 class="categories-title">Материалы</h3>
           <a class="button categories-item-link" href="" aria-label="Материалы на любой вкус">На любой вкус</a>
         </div>
@@ -74,20 +83,20 @@
         <div class="slider">
           <div class="slider-item perforators">
             <h3 class="slider-title">Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
+            <p class="slider-item-description">Настоящие мужские игрушки</p>
             <a  class="button slider-item-button" href="./catalog.html">Открыть каталог</a>
           </div>
           <div class="slider-item drills visually-hidden">
             <h3 class="slider-title">Дрели</h3>
-            <p>Соседям на радость!</p>
+            <p class="slider-item-description">Соседям на радость!</p>
             <a  class="button slider-item-button" href="./catalog.html">Открыть каталог</a>
           </div>
           <div class="slider-controls">
-            <button class="slider-back-button" aria-label="Назад"></button>
-            <button class="slider-forward-button" aria-label="Вперед"></button>
+            <button class="slider-controls-button slider-back-button" aria-label="Назад"></button>
+            <button class="slider-controls-button slider-forward-button" aria-label="Вперед"></button>
           </div>
           <div class="slider-pagination">
-            <button class="slider-pagination-button" aria-label="Первый слайд"></button>
+            <button class="slider-pagination-button current" aria-label="Первый слайд"></button>
             <button class="slider-pagination-button" aria-label="Второй слайд"></button>
           </div>
         </div>
@@ -105,7 +114,7 @@
                 <a class="button bookmark-button" href="">В закладки</a>
               </div>
               <a class="catalog-item-image" href=""><img src="./img/products/BOSCH-BFG-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000"></a>
-              <h3><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 9000</a></h3>
+              <h3 class="catalog-item-heading"><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 9000</a></h3>
               <del class="catalog-item-price-old">32500 р.</del>
               <p class="catalog-item-price">25500 р.</p>
             </article>
@@ -117,7 +126,7 @@
                 <a class="button bookmark-button" href="">В закладки</a>
               </div>
               <a class="catalog-item-image" href=""><img src="./img/products/BOSCH-BFG-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></a>
-              <h3><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 3000</a></h3>
+              <h3 class="catalog-item-heading"><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 3000</a></h3>
               <del class="catalog-item-price-old">22500 р.</del>
               <p class="catalog-item-price">15500 р.</p>
             </article>
@@ -129,7 +138,7 @@
                 <a class="button bookmark-button" href="">В закладки</a>
               </div>
               <a class="catalog-item-image" href=""><img src="./img/products/BOSCH-BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></a>
-              <h3><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 6000</a></h3>
+              <h3 class="catalog-item-heading"><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 6000</a></h3>
               <del class="catalog-item-price-old">30500 р.</del>
               <p class="catalog-item-price">25500 р.</p>
             </article>
@@ -141,7 +150,7 @@
                 <a class="button bookmark-button" href="">В закладки</a>
               </div>
               <a class="catalog-item-image" href=""><img src="./img/products/BOSCH-BFG-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></a>
-              <h3><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 2000</a></h3>
+              <h3 class="catalog-item-heading"><a class="catalog-item-title" href="">Перфоратор BOSCH BFG 2000</a></h3>
               <del class="catalog-item-price-old">22500 р.</del>
               <p class="catalog-item-price">12500 р.</p>
             </article>
@@ -154,14 +163,14 @@
           <a class="button" href="">Все производители</a>
         </div>
         <ul class="brands-list">
-          <li class="brands-item"><a href=""><img src="./img/brands/bosch.png" width="126" height="37" alt="BOSCH"></a></li>
-          <li class="brands-item"><a href=""><img src="./img/brands/Makita.png" width="123" height="40" alt="Makita"></a></li>
-          <li class="brands-item"><a href=""><img src="./img/brands/DeWALT.png" width="146" height="44" alt="DeWALT"></a></li>
-          <li class="brands-item"><a href=""><img src="./img/brands/Interskol.png" width="200" height="88" alt="Интерскол"></a></li>
-          <li class="brands-item"><a href=""><img src="./img/brands/Hitachi.png" width="169" height="31" alt="HITACHI"></a></li>
-          <li class="brands-item"><a href=""><img src="./img/brands/LG.png" width="121" height="73" alt="LG"></a></li>
-          <li class="brands-item"><a href=""><img src="./img/brands/AEG.png" width="151" height="96" alt="AEG"></a></li>
-          <li class="brands-item"><a href=""><img src="./img/brands/Metabo.png" width="204" height="69" alt="metabo"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/bosch.png" width="126" height="37" alt="BOSCH"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/Makita.png" width="123" height="40" alt="Makita"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/DeWALT.png" width="146" height="44" alt="DeWALT"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/Interskol.png" width="200" height="88" alt="Интерскол"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/Hitachi.png" width="169" height="31" alt="HITACHI"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/LG.png" width="121" height="73" alt="LG"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/AEG.png" width="151" height="96" alt="AEG"></a></li>
+          <li class="brands-item"><a class="brands-link" href=""><img src="./img/brands/Metabo.png" width="204" height="69" alt="metabo"></a></li>
         </ul>
       </section>
       <section class="info-block services">
@@ -193,20 +202,20 @@
       <div class="index-columns">
         <section class="info-block about-us">
           <h2 class="section-header alternative">Компания «Техномарт»</h2>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
+          <p class="about-us-text about-us-desc">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p class="about-us-text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
           <ul class="partners-list">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
+            <li class="partners-list-item">Деловые линии</li>
+            <li class="partners-list-item">Автотрейдинг</li>
+            <li class="partners-list-item">ЖелДорЭкспедиция</li>
           </ul>
           <a class="button" href="">Подробнее о компании</a>
         </section>
         <section class="info-block contacts">
           <h2 class="section-header alternative">Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <a href=""><img src="./img/map-pop-up/map-mini.png" width="300" height="158" alt="Карта офиса по адресу улица Большая Конюшенная, дом 19"></a>
-          <a class="button" href="">Заблудились? Напишите нам!</a>
+          <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис:</p>
+          <a  class="contacts-map" href=""><img src="./img/map-pop-up/map-mini.png" width="300" height="158" alt="Карта офиса по адресу улица Большая Конюшенная, дом 19"></a>
+          <a class="button contacts-button" href="">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -251,27 +260,31 @@
         </div>
       </div>
     </footer>
-    <div class="pop-up contact-us">
+    <div class="pop-up modal-contact-us">
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="feedback-name">
-          <label class="contact-us-label" for="feedback-name">Ваше имя:</label>
-          <input  class="contact-us-field" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+        <div class="modal-center">
+          <div class="feedback-name">
+            <label class="contact-us-label" for="feedback-name">Ваше имя:</label>
+            <input  class="contact-us-field" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+          </div>
+          <div class="feedback-email">
+            <label class="contact-us-label" for="feedback-email">Ваш e-mail:</label>
+            <input  class="contact-us-field" type="email" name="email" id="feedback-email" placeholder="email@example.com">
+          </div>
+          <div class="feedback-text">
+            <label class="contact-us-label" for="feedback-text">Текст письма:</label>
+            <textarea class="contact-us-field"  name="text" id="feedback-text" rows="4">В свободной форме</textarea>
+          </div>
         </div>
-        <div class="feedback-email">
-          <label class="contact-us-label" for="feedback-email">Ваш e-mail:</label>
-          <input  class="contact-us-field" type="email" name="email" id="feedback-email" placeholder="email@example.com">
+        <div class="feedback-footer">
+          <button class="button feedback-submit-button" type="submit">Отправить</button>
         </div>
-        <div class="feedback-text">
-          <label class="contact-us-label" for="feedback-text">Текст письма:</label>
-          <textarea class="contact-us-field"  name="text" id="feedback-text" rows="4">В свободной форме</textarea>
-        </div>
-        <button class="button" type="submit">Отправить</button>
       </form>
-      <button class="close-button" type="button" aria-label="Закрыть"></button>
+      <button class="close-button feedback-close-button" type="button" aria-label="Закрыть"></button>
     </div>
-    <div class="pop-up map">
+    <div class="pop-up modal-map">
       <a href="https://goo.gl/maps/TgD5axc2hdM5SUbC6" aria-label="Открыть карту в Google Maps"><img src="./img/map-pop-up/map-large.png" width="970" height="477" alt="Увеличенная карта офиса по адресу улица Большая Конюшенная, дом 19"></a>
-      <button class="close-button" type="button">Закрыть</button>
+      <button class="close-button map-close-button" type="button" aria-label="Закрыть"></button>
     </div>
   </body>
 </html>
