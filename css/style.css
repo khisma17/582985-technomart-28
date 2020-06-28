@@ -63,7 +63,7 @@ img {
 }
 
 svg {
-  fill: currentColor; /*А ничего, что глобальные стили используем здесь? Вроде как вразрез с критерием Д25 идет*/
+  fill: currentColor;
 }
 
 .page {
@@ -131,18 +131,17 @@ svg {
   grid-area: header-bottom;
 }
 
-.main-content {
+.main-content:not(.inner-page) {
   display: grid;
   padding-top: 59px;
   padding-bottom: 70px;
 }
 
-.main-content.inner-page {
+.main-content.inner-page > .center {
   display: grid;
   grid-template-columns: 220px auto;
   column-gap: 20px;
   padding-top: 21px;
-  padding-bottom: 68px;
 }
 
 .visually-hidden {
@@ -237,6 +236,7 @@ svg {
   height: 16px;
   background-image: url(../img/icons/icon-bookmark.svg);
   background-repeat: no-repeat;
+  background-size: 14px 16px;
   opacity: 0.3;
   top: 13px;
   left: 20px;
@@ -262,7 +262,7 @@ svg {
   padding-left: 49px;
 }
 
-.bookmarks-link.full {
+.bookmarks-link.active {
   background-color: var(--basic-red);
 }
 
@@ -277,6 +277,7 @@ svg {
   height: 15px;
   background-image: url("../img/icons/icon-cart.svg");
   background-repeat: no-repeat;
+  background-size: 15px 15px;
   opacity: 0.3;
   top: 13px;
   left: 26px;
@@ -350,6 +351,7 @@ svg {
   position: absolute;
   background-image: url(../img/icons/icon-phone.svg);
   background-repeat: no-repeat;
+  background-size: 19px 19px;
   width: 19px;
   height: 19px;
   top: 10px;
@@ -391,7 +393,7 @@ svg {
   color: var(--basic-red);
 }
 
-.user-navigation-button:hover > .user-navigation-icon {
+.user-navigation-button:hover .user-navigation-icon {
   color: var(--special-hover-blue);
 }
 
@@ -399,7 +401,7 @@ svg {
   color: var(--basic-red);
 }
 
-.user-navigation-button:focus > .user-navigation-icon {
+.user-navigation-button:focus .user-navigation-icon {
   color: var(--special-hover-blue);
 }
 
@@ -407,7 +409,7 @@ svg {
   color: var(--special-active-gray);
 }
 
-.user-navigation-button:active > .user-navigation-icon {
+.user-navigation-button:active .user-navigation-icon {
   color: var(--special-active-gray);
 }
 
@@ -460,15 +462,15 @@ svg {
   color: var(--special-active-gray);
 }
 
-.logout-button:hover > .logout-icon {
+.logout-button:hover .logout-icon {
   color: var(--special-hover-blue);
 }
 
-.logout-button:hover > .logout-icon {
+.logout-button:hover .logout-icon {
   color: var(--special-hover-blue);
 }
 
-.logout-button:active > .logout-icon {
+.logout-button:active .logout-icon {
   color: var(--special-active-gray);
 }
 
@@ -644,6 +646,8 @@ svg {
   width: 60px;
   height: 59px;
   background-image: url(../img/icons/category-new.svg);
+  background-repeat: no-repeat;
+  background-size: 60px 59px;
 }
 
 .categories-item-link {
@@ -716,6 +720,7 @@ svg {
   justify-content: flex-start;
   align-items: flex-start;
   background-repeat: no-repeat;
+  background-position: 0 0;
   min-height: 266px;
   padding-top: 23px;
   padding-left: 24px;
@@ -738,6 +743,7 @@ svg {
   height: 40px;
   background-image: url(../img/icons/icon-left.svg);
   background-repeat: no-repeat;
+  background-size: 22px 40px;
   border: none;
   cursor: pointer;
 }
@@ -833,6 +839,7 @@ svg {
   top: 10px;
   background-image: url(../img/icons/icon-cart.svg);
   background-repeat: no-repeat;
+  background-size: 15px 15px;
 }
 
 .buy-button:hover {
@@ -905,6 +912,8 @@ svg {
   top: 0px;
   right: 0px;
   background-image: url(../img/icons/catalog-new.svg);
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
 }
 
 .catalog-item:nth-child(3n) {
@@ -915,27 +924,27 @@ svg {
   margin: auto;
   grid-row: 1 / 3;
   grid-column: 1 / -1;
-  z-index: 1;
 }
 
 .catalog-item-actions {
-  margin: auto;
-  display: none;
+  padding-top: 38px;
+  background-color: var(--basic-white); /* Размеры как у картинки не стал задавать, потому как кнопки вроде и так все что нужно перекрывают сейчас, а размеры у всех картинок разные, и я не определился, какие брать :) Самую большую? А что если потом еще крупнее картинки появятся? */
   grid-row: 1 / 3;
   grid-column: 1 / -1;
-  z-index: 2;
+  opacity: 0; /* Кстати, от display: none вроде избавился, но с клавиатуры на эти кнопки все равно попасть не могу. Это норма, или что-то еще поправить нужно? */
+  z-index: -1;
 }
 
 .catalog-item:hover {
   box-shadow: 0px 4px 20px var(--basic-shadow-gray);
 }
 
-.catalog-item:hover > .catalog-item-actions {
-  display: block;
+.catalog-item:hover .catalog-item-actions {
+  opacity: 1;
+  z-index: 1;
 }
 
-.catalog-item:hover > .catalog-item-image {
-  display: none;
+.catalog-item:hover .catalog-item-image {
 }
 
 .catalog-item-heading {
@@ -1042,6 +1051,7 @@ svg {
   background-color: var(--basic-light-gray);
   padding-top: 64px;
   grid-column: 1 / -1;
+  padding-bottom: 68px;
 }
 
 .perforators-intro-text {
@@ -1307,6 +1317,7 @@ svg {
 
 .range-controls .toggle {
   position: absolute;
+  padding: 0;
   top: 30px;
   left: 0;
   width: 20px;
@@ -1412,6 +1423,8 @@ svg {
   width: 26px;
   border: none;
   background-image: url(../img/icons/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-size: 26px 23px;
 }
 
 .filter-brands-checkbox:hover + .filter-label::before {
@@ -1421,6 +1434,8 @@ svg {
 .filter-brands-checkbox:checked:hover + .filter-label::before {
   border: none;
   background-image: url(../img/icons/checkbox-on-hover.svg);
+  background-repeat: no-repeat;
+  background-size: 26px 23px;
 }
 
 .filter-brands-checkbox:disabled + .filter-label::before {
@@ -1431,6 +1446,8 @@ svg {
 .filter-brands-checkbox:checked:disabled + .filter-label::before {
   border: none;
   background-image: url(../img/icons/checkbox-on-hover.svg);
+  background-repeat: no-repeat;
+  background-size: 26px 23px;
   opacity: 0.3;
 }
 
@@ -1869,7 +1886,6 @@ svg {
 }
 
 .modal-contact-us {
-  display: none;
   bottom: auto;
   top: calc(50vh - 215px);
   width: 620px;
@@ -1878,7 +1894,6 @@ svg {
 }
 
 .modal-map {
-  display: none;
   bottom: auto;
   top: calc(50vh - 225px);
   width: 943px;
@@ -1886,7 +1901,6 @@ svg {
 }
 
 .modal-added-to-cart {
-  display: none;
   width: 620px;
   top: calc(50vh - 140px);
   bottom: auto;
@@ -1903,6 +1917,7 @@ svg {
 .close-button {
   background-image: url("../img/icons/icon-close.svg");
   background-repeat: no-repeat;
+  background-size: 21px 21px;
   position: absolute;
   padding: 0;
   width: 21px;
@@ -1914,15 +1929,15 @@ svg {
 .feedback-name {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: calc((100% - 20px) / 2);
   margin-bottom: 13px;
+  margin-right: 20px;
 }
 
 .feedback-email {
   display: flex;
   flex-direction: column;
-  width: 220px;
-  margin-left: auto;
+  width: calc((100% - 20px) / 2);
 }
 
 .feedback-text {
