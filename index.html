@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="./css/normalize.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d5dfba6f-cf0b-4336-9fbc-579878b98f7c&lang=ru_RU" type="text/javascript"></script>
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -22,7 +23,7 @@
             </button>
           </form>
           <a class="bookmarks-link" href="" aria-label="Закладки">Закладки: <span>0</span></a>
-          <a class="cart-link" href="" aria-label="Корзина">Корзина: <span>0</span></a>
+          <a class="cart-link" href="" aria-label="Корзина">Корзина: <span class="cart-counter">0</span></a>
           <a class="order-button" href="">Оформить заказ</a>
         </div>
       </div>
@@ -93,12 +94,12 @@
               <a  class="button slider-item-button" href="./catalog.html">Открыть каталог</a>
             </div>
             <div class="slider-controls">
-              <button class="slider-controls-button slider-back-button" aria-label="Назад"></button>
-              <button class="slider-controls-button slider-forward-button" aria-label="Вперед"></button>
+              <button class="slider-controls-button slider-back-button" type="button" aria-label="Назад"></button>
+              <button class="slider-controls-button slider-forward-button" type="button" aria-label="Вперед"></button>
             </div>
             <div class="slider-pagination">
-              <button class="slider-pagination-button current" aria-label="Первый слайд"></button>
-              <button class="slider-pagination-button" aria-label="Второй слайд"></button>
+              <button class="slider-pagination-button current" type="button" aria-label="Первый слайд"></button>
+              <button class="slider-pagination-button" type="button" aria-label="Второй слайд"></button>
             </div>
           </div>
         </section>
@@ -183,9 +184,9 @@
           </p>
           <div class="services-slider">
             <ul class="services-slider-list">
-              <li class="services-slider-list-item"><button class="services-slider-button active">Доставка</button></li>
-              <li class="services-slider-list-item"><button class="services-slider-button">Гарантия</button></li>
-              <li class="services-slider-list-item"><button class="services-slider-button">Кредит</button></li>
+              <li class="services-slider-list-item"><button class="services-slider-button active" type="button">Доставка</button></li>
+              <li class="services-slider-list-item"><button class="services-slider-button" type="button">Гарантия</button></li>
+              <li class="services-slider-list-item"><button class="services-slider-button" type="button">Кредит</button></li>
             </ul>
             <div class="services-slider-item services-delivery">
               <h3 class="section-header">Доставка</h3>
@@ -279,7 +280,7 @@
           </div>
           <div class="feedback-text">
             <label class="contact-us-label" for="feedback-text">Текст письма:</label>
-            <textarea class="contact-us-field"  name="text" id="feedback-text" rows="4">В свободной форме</textarea>
+            <textarea class="contact-us-field"  name="text" id="feedback-text" rows="4" placeholder="В свободной форме"></textarea>
           </div>
         </div>
         <div class="feedback-footer">
@@ -289,8 +290,24 @@
       <button class="close-button feedback-close-button" type="button" aria-label="Закрыть"></button>
     </div>
     <div class="visually-hidden pop-up modal-map">
+      <div class="modal-map-container" id="yandex-map" style="width:943px; height:449px"></div>
       <a href="https://goo.gl/maps/TgD5axc2hdM5SUbC6" aria-label="Открыть карту в Google Maps"><img class="modal-map-image" src="./img/map-pop-up/map-large.png" width="943" height="449" alt="Увеличенная карта офиса по адресу улица Большая Конюшенная, дом 19"></a>
       <button class="close-button map-close-button" type="button" aria-label="Закрыть"></button>
     </div>
+    <div class="visually-hidden pop-up modal-added-to-cart">
+      <p class="added-to-cart-message">Товар добавлен в корзину!</p>
+      <div class="button-area">
+        <a class="button model-order-button" href="">Оформить заказ</a>
+        <button class="button continue-button" type="button">Продолжить покупки</button>
+      </div>
+      <button class="close-button cart-close-button" type="button" aria-label="Закрыть"></button>
+    </div>
+
+    <script src="./js/feedbackPopup.js"></script>
+    <script src="./js/mapPopup.js"></script>
+    <script src="./js/cartPopup.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/services.js"></script>
+
   </body>
 </html>
