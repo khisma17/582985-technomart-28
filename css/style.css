@@ -738,15 +738,15 @@ svg {
   content: "";
 
   position: absolute;
-  top: 2px;
-  right: 2px;
+  top: 0px;
+  right: 0px;
 
-  width: 60px;
-  height: 59px;
+  width: 65px;
+  height: 64px;
 
   background-image: url(../img/icons/category-new.svg);
   background-repeat: no-repeat;
-  background-size: 60px 59px;
+  background-size: 65px 64px;
 }
 
 .categories-item-link {
@@ -1137,7 +1137,7 @@ svg {
   padding-top: 8px;
   padding-left: 16px;
 
-  line-height: 22px; /* Вот здесь я изменил высоту строки, чтобы под Perfect Pixel подогнать, но это противоречит базовому критерию Б9, оказывается. Можно так оставить или лучше каким-то другим способом добиться нужного интерлиньяжа? */
+  line-height: 22px;
 }
 
 .catalog-item-title {
@@ -1334,6 +1334,8 @@ svg {
   border: none;
   background-color: var(--basic-blue);
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+
+  cursor: pointer;
 }
 
 .services-slider-button:hover {
@@ -1858,6 +1860,7 @@ svg {
   background-color: var(--basic-white);
   border: 1px solid var(--special-gray);
 
+  cursor: pointer;
 }
 
 .sort {
@@ -1918,6 +1921,8 @@ svg {
   background-color: transparent;
   border: none;
   border-bottom: 1px dotted var(--basic-red);
+
+  cursor: pointer;
 }
 
 .sort-button:hover {
@@ -1998,6 +2003,8 @@ svg {
   border: 1px solid var(--special-gray);
   border-radius: 2px;
   background-color: var(--basic-white);
+
+  cursor: pointer;
 }
 
 .catalog-pagination-button:hover {
