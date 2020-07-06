@@ -170,7 +170,7 @@ svg {
   display: block;
 
   background-color: var(--basic-red);
-  box-shadow: 0px 5px 0px var(--special-shadow-red);
+  box-shadow: 0 5px 0 var(--special-shadow-red);
 }
 
 .main-header-logo {
@@ -604,7 +604,7 @@ svg {
   padding: 0;
   padding-left: 22px;
 
-  box-shadow: inset 0px -5px 0px var(--basic-dark-blue);
+  box-shadow: inset 0 -5px 0 var(--basic-dark-blue);
 }
 
 .site-navigation-link {
@@ -616,7 +616,7 @@ svg {
   color: var(--basic-white);
 
   background-color: var(--basic-blue);
-  box-shadow: inset 0px -5px 0px var(--basic-dark-blue);
+  box-shadow: inset 0 -5px 0 var(--basic-dark-blue);
 }
 
 .site-navigation-link[href]:hover {
@@ -738,8 +738,8 @@ svg {
   content: "";
 
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 
   width: 65px;
   height: 64px;
@@ -973,7 +973,7 @@ svg {
   margin-bottom: 10px;
 
   background-color: var(--basic-green);
-  box-shadow: inset 0px -3px 0px var(--special-shadow-green);
+  box-shadow: inset 0 -3px 0 var(--special-shadow-green);
   border-radius: 2px;
 }
 
@@ -1067,8 +1067,8 @@ svg {
   content: "";
 
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 
   width: 70px;
   height: 70px;
@@ -1115,7 +1115,7 @@ svg {
 }
 
 .catalog-item:hover {
-  box-shadow: 0px 4px 20px var(--basic-shadow-gray);
+  box-shadow: 0 4px 20px var(--basic-shadow-gray);
 }
 
 .catalog-item:hover .catalog-item-actions {
@@ -1226,16 +1226,16 @@ svg {
 
 
 .brands-item:hover {
-  box-shadow: 0px 4px 20px var(--basic-shadow-gray);
+  box-shadow: 0 4px 20px var(--basic-shadow-gray);
 }
 
 .brands-item:focus {
-  box-shadow: 0px 4px 20px var(--basic-shadow-gray);
+  box-shadow: 0 4px 20px var(--basic-shadow-gray);
 }
 
 .brands-item:active {
   opacity: 0.5;
-  box-shadow: 0px 4px 20px var(--basic-shadow-gray);
+  box-shadow: 0 4px 20px var(--basic-shadow-gray);
 }
 
 .brands-link {
@@ -1305,7 +1305,7 @@ svg {
 
   position: absolute;
   top: -40px;
-  right: 0px;
+  right: 0;
 
   width: 10px;
   height: 279px;
@@ -1333,7 +1333,7 @@ svg {
 
   border: none;
   background-color: var(--basic-blue);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
 
   cursor: pointer;
 }
@@ -1350,7 +1350,7 @@ svg {
   color: var(--basic-blue);
 
   background-color: var(--basic-white);
-  box-shadow: 0px 1px 0px #FFFFFF;
+  box-shadow: 0 1px 0 #FFFFFF;
 }
 
 .services-slider-item {
@@ -1477,7 +1477,7 @@ svg {
 
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 0;
 
   width: 25px;
   height: 2px;
@@ -1627,7 +1627,7 @@ svg {
   background-color: var(--special-toggle-gray);
   border: 8px solid var(--basic-white);
   border-radius: 50%;
-  box-shadow: 0px 2px 1px var(--basic-shadow-gray);
+  box-shadow: 0 2px 1px var(--basic-shadow-gray);
 
   cursor: pointer;
 }
@@ -1659,8 +1659,8 @@ svg {
   content: "";
 
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
 
   width: 100%;
 
@@ -2298,10 +2298,6 @@ svg {
   animation: bounce 0.6s;
 }
 
-.modal-error {
-  animation: shake 0.6s;
-}
-
 .modal-contact-us {
   bottom: auto;
   top: calc(50vh - 215px);
@@ -2309,7 +2305,7 @@ svg {
   width: 620px;
   padding-top: 39px;
 
-  box-shadow: 0px 4px 20px var(--basic-shadow-gray);
+  box-shadow: 0 4px 20px var(--basic-shadow-gray);
 }
 
 .modal-map {
@@ -2531,19 +2527,5 @@ svg {
 
   100% {
     transform: translateY(0);
-  }
-}
-
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
-  }
-
-  20%, 40%, 60%, 80% {
-    transform: translateX(10px);
   }
 }
