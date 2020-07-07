@@ -158,7 +158,7 @@ svg {
   padding-bottom: 70px;
 }
 
-.main-content.inner-page > .center {
+.inner-page > .center { /* Поправил на всякий случай, чтобы не было похоже на излишнюю вложенность, хотя по сути и так два уровня было (критерий Д7) */
   display: grid;
   grid-template-columns: 220px auto;
   column-gap: 20px;
@@ -2298,6 +2298,10 @@ svg {
   animation: bounce 0.6s;
 }
 
+.modal-error {
+  animation: shake 0.6s;
+}
+
 .modal-contact-us {
   bottom: auto;
   top: calc(50vh - 215px);
@@ -2314,6 +2318,8 @@ svg {
 
   width: 943px;
   height: 449px;
+
+  background-color: var(--basic-beige); /* критерий Д10 */
 }
 
 .modal-map-image {
@@ -2527,5 +2533,19 @@ svg {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
   }
 }

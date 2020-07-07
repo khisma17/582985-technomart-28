@@ -1,53 +1,5 @@
 var ESC = "Escape";
 
-// Корзина
-
-// Пришлось перенести скрипт для модального окна корзины в самое начало файла, чтобы он срабатывал и на странице каталога, когда один и тот же JS-файл к обеим страницам подключаешь. Но ошибка в консоли по-прежнему вылезает - неудивительно, ведь всех этих классов, которые в остальных скриптах использлваны, у меня на странице каталога нет.
-
-var cartLinks = document.querySelectorAll(".buy-button");
-var cartPopup = document.querySelector(".modal-added-to-cart");
-var cartClose = document.querySelector(".cart-close-button");
-var cartContinue = document.querySelector(".continue-button");
-var cartCounter = document.querySelector(".cart-counter");
-var cartTab = document.querySelector(".cart-link");
-
-if (cartLinks !== null) {
-  for (var i = 0; i < cartLinks.length; i++) {
-    cartLinks[i].addEventListener("click", function(evt) {
-      evt.preventDefault();
-      var currentCount = parseInt(cartCounter.textContent); //добавил здесь тоже явное приведение к числовому типу, потому что без него единица просто добавлялась в конец строки (0, 01, 001 и т.д.)
-      cartCounter.textContent = currentCount + 1;
-      cartPopup.classList.remove("visually-hidden");
-      cartPopup.classList.add("modal-show");
-      if (parseInt(cartCounter.textContent) > 0) {
-        cartTab.classList.add("active");
-      }
-    })
-  }
-}
-
-cartClose.addEventListener("click", function() {
-  cartPopup.classList.remove("modal-show");
-  cartPopup.classList.add("visually-hidden");
-})
-
-cartContinue.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  cartPopup.classList.remove("modal-show");
-  cartPopup.classList.add("visually-hidden");
-})
-
-document.addEventListener("keydown", function(evt) {
-  if (evt.key === ESC) {
-    if (cartPopup.classList.contains("modal-show")) {
-      evt.preventDefault();
-      cartPopup.classList.remove("modal-show");
-      cartPopup.classList.add("visually-hidden");
-    }
-  }
-})
-
-
 // Форма обратной связи
 
 var feedbackLink = document.querySelector(".contacts-button");
@@ -99,6 +51,9 @@ if (feedbackClose !== null) {
   feedbackForm.addEventListener("submit", function(evt) {
     if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
       evt.preventDefault();
+      feedbackPopup.classList.remove("modal-error"); // все же вернул анимацию ошибки, раз критерий требует (Д17)
+      feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
+      feedbackPopup.classList.add("modal-error");
     } else {
       if (isStorageSupport) {
       localStorage.setItem("name", feedbackName.value);
@@ -163,6 +118,51 @@ if (mapPopup !== null) {
   })
 }
 
+// Корзина
+
+var cartLinks = document.querySelectorAll(".buy-button");
+var cartPopup = document.querySelector(".modal-added-to-cart");
+var cartClose = document.querySelector(".cart-close-button");
+var cartContinue = document.querySelector(".continue-button");
+var cartCounter = document.querySelector(".cart-counter");
+var cartTab = document.querySelector(".cart-link");
+
+if (cartLinks !== null) {
+  for (var i = 0; i < cartLinks.length; i++) {
+    cartLinks[i].addEventListener("click", function(evt) {
+      evt.preventDefault();
+      var currentCount = parseInt(cartCounter.textContent);
+      cartCounter.textContent = currentCount + 1;
+      cartPopup.classList.remove("visually-hidden");
+      cartPopup.classList.add("modal-show");
+      if (parseInt(cartCounter.textContent) > 0) {
+        cartTab.classList.add("active");
+      }
+    })
+  }
+}
+
+cartClose.addEventListener("click", function() {
+  cartPopup.classList.remove("modal-show");
+  cartPopup.classList.add("visually-hidden");
+})
+
+cartContinue.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  cartPopup.classList.remove("modal-show");
+  cartPopup.classList.add("visually-hidden");
+})
+
+document.addEventListener("keydown", function(evt) {
+  if (evt.key === ESC) {
+    if (cartPopup.classList.contains("modal-show")) {
+      evt.preventDefault();
+      cartPopup.classList.remove("modal-show");
+      cartPopup.classList.add("visually-hidden");
+    }
+  }
+})
+
 
 // Слайдер
 
@@ -189,7 +189,7 @@ function removeVisuallyHiddenSliderClass() {
 for (var j = 0; j < sliderControls.length; j++) {
   sliderControls[j].addEventListener("click", function() {
     addVisuallyHiddenSliderClass();
-    sliderItems[(sliderItems.length + countSlider) % sliderItems.length].classList.remove("visually-hidden"); // вот здесь мне кажется, что я понял идею, но тем не менее так и не понял, почему мы хотим делить что-либо на countSlider, который постоянно растет? Тем более если делим единицу - остаток в таком случае будет 1 на первой итерации, а потом всегда ноль. Поэтому сделал несколько иначе, но так, чтобы это работало - остаток у меня начинается от 1 и растет до количества слайдов в слайдере, после чего снова с 0 начинается. Дай знать, если я все же неправильно истрактовал затею :)
+    sliderItems[(sliderItems.length + countSlider) % sliderItems.length].classList.remove("visually-hidden");
     sliderPaginators[(sliderPaginators.length + countSlider) % sliderPaginators.length].classList.add("current");
     countSlider++;
   })
