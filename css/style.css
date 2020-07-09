@@ -175,16 +175,26 @@ svg {
   box-shadow: 0 5px 0 var(--special-shadow-red);
 }
 
+.logo[href]:hover {
+  background-color: var(--special-hover-red);
+  box-shadow: 0 5px 0 var(--special-shadow-red);
+}
+
+.logo[href]:focus {
+  background-color: var(--special-hover-red);
+  box-shadow: 0 5px 0 var(--special-shadow-red);
+}
+
+.logo[href]:active {
+  background-color: var(--special-active-red);
+  box-shadow: 0 5px 0 var(--special-active-shadow-red);
+}
+
 .main-header-logo {
   padding: 12px 0;
   padding-left: 55px;
   width: 220px;
   height: 42px;
-}
-
-.main-header-logo:active {
-  background-color: var(--special-active-red);
-  box-shadow: 0 5px 0 var(--special-active-shadow-red);
 }
 
 .search-form {
@@ -481,6 +491,10 @@ svg {
   color: var(--basic-red);
 }
 
+.user-navigation-button:hover .user-navigation-icon {
+  color: var(--special-hover-blue);
+}
+
 .user-navigation-button:focus .user-navigation-icon {
   color: var(--special-hover-blue);
 }
@@ -545,7 +559,7 @@ svg {
   color: var(--special-hover-blue);
 }
 
-.logout-button:hover .logout-icon {
+.logout-button:focus .logout-icon {
   color: var(--special-hover-blue);
 }
 
@@ -1800,6 +1814,17 @@ svg {
   background-size: 26px 23px;
 }
 
+.filter-brands-checkbox:focus + .filter-label::before {
+  border: 2px solid var(--special-darker-gray);
+}
+
+.filter-brands-checkbox:checked:focus + .filter-label::before {
+  border: none;
+  background-image: url(../img/icons/checkbox-on-hover.svg);
+  background-repeat: no-repeat;
+  background-size: 26px 23px;
+}
+
 .filter-brands-checkbox:disabled + .filter-label::before {
   border: 2px solid var(--special-darker-gray);
   opacity: 0.3;
@@ -1854,6 +1879,14 @@ svg {
 }
 
 .filter-power-radio:checked:hover + .filter-label::after {
+  background-color: var(--special-darker-gray);
+}
+
+.filter-power-radio:focus + .filter-label::before {
+  border-color: var(--special-darker-gray);
+}
+
+.filter-power-radio:checked:focus + .filter-label::after {
   background-color: var(--special-darker-gray);
 }
 
@@ -2091,10 +2124,6 @@ svg {
   margin-bottom: 28px;
 }
 
-.main-footer-logo:active {
-  background-color: var(--special-active-red);
-}
-
 .footer-bottom {
   background-color: var(--basic-dark-blue);
 }
@@ -2156,11 +2185,11 @@ svg {
   text-decoration: underline;
 }
 
-.footer-site-navigation-link:focus {
+.footer-site-navigation-link[href]:focus {
   text-decoration: underline;
 }
 
-.footer-site-navigation-link:active {
+.footer-site-navigation-link[href]:active {
   text-decoration: none;
   color: var(--special-active-lighter-gray);
 }
